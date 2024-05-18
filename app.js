@@ -6,6 +6,8 @@ const expressLayout = require('express-ejs-layouts');
 const cookieParser = require('cookie-parser');
 const flashMessage = require('connect-flash');
 const flashMiddleware = require('./config/customMiddlewareMessage');
+require('dotenv').config();     // Load environment variables from .env file
+const uri = process.env.MONGODB_URI;
 
 //DB connection - 
 const db = require('./config/mongoose');
@@ -44,7 +46,7 @@ app.use(session({                       // This code will generate unique string
         maxAge:(1000*60*100)
     },
     store: new MongoStore ({
-        mongoUrl: 'mongodb://127.0.0.1:27017/MyChatSphere',
+        mongoUrl: uri,
         mongooseConnection : db,
         autoRemove : 'disable'
     }, function(error){
