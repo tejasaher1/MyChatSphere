@@ -14,11 +14,10 @@
 
 
 const mongoose = require('mongoose');
+require('dotenv').config(); // Load environment variables from .env file
 
-// Connection URI for MongoDB Atlas
-const uri = 'mongodb+srv://tejasaher9623:5b3Q0cMcAGCKSD8O@production-cluster.hvonmpn.mongodb.net/MyChatSphere?retryWrites=true&w=majority';
+const uri = process.env.MONGODB_URI;
 
-// Connect to MongoDB Atlas
 mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -26,7 +25,7 @@ mongoose.connect(uri, {
 
 const db = mongoose.connection;
 
-db.on('error', console.log.bind(console, 'Error connecting to db'));
+db.on('error', console.error.bind(console, 'Error connecting to db'));
 
 db.once('open', function() {
   console.log('Successfully connected to database!');
