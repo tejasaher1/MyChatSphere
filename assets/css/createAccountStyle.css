@@ -1,0 +1,25 @@
+body{
+    margin: 0px; 
+}
+
+#createAcountDiv{
+    position: relative;
+    height: 250px;
+    width: 260px;
+    border: 2px solid black;
+    left: 50px;
+    top: 50px;
+}    
+
+#form label,
+#form input, #form button {
+    position: relative;
+    margin-bottom: 20px;
+    left: 10px;
+    top: 10px;
+}
+
+#createAcountDiv > h3{
+    position: relative;
+    left: 10px;
+}

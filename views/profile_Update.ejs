@@ -1,0 +1,18 @@
+
+<div style="position: absolute; left: 20px;">
+    <h3> Hii <%= locals.user.name %>! &nbsp; You can now Update your Profile</h3>
+
+    <div>
+        <form action="/users/profile_update?UserId=<%- locals.user.id %>" method="post">
+            <label for="name">Update Name -</label>
+            <input type="text" name="name" id="">
+            <br>
+            <br>
+            <label for="email">Update Email -</label>
+            <input type="email" name="email">
+            <br>
+            <br>
+            <button> Update </button>
+        </form>
+    </div>
+</div>

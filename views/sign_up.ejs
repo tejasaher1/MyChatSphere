@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/css/createAccountStyle.css">
+
+
+
+<div id="createAcountDiv">
+    <h3> Crearte Account </h3>
+
+    <form action="/users/create_user" method="post" id="form">
+        <label for="name"> Name -</label>
+        <input style="position: relative;left: 34px;" type="text" name="name" placeholder="Enter the Name...." required>
+
+        <label for="email"> Email -</label>
+        <input style="position: relative;left: 34px;" type="email" name="email" placeholder="Enter the Email...." required>
+
+        <label for="password"> Password -</label>
+        <input type="password" name="password" placeholder="Enter the password..." required>
+        <button> Submit </button>
+    </form>
+    <br>
+    <h5> You have account?<a href="http://localhost:8000/">Login</a></h5>
+
+</div>

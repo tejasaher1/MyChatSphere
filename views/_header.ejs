@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/css/headerStyle.css">
+<div id="mainDiv">
+    <% if(locals.user){ %>   
+        <a href="/users/sign-out" class="signOut"> <h3> Sign-Out </h3> </a>
+
+        <a href="/users/profileUpdatePage" class="profile_update"> <h3> Profile </h3> </a>
+    <%} else {%> 
+        
+        <a href="/users/create_Account_Page" class="create_Account"> <h3> Create Account </h3> </a>
+        
+    <%}%>
+</div>

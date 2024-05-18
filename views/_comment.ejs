@@ -1,0 +1,8 @@
+<% for(comment of post.commentArray){ %> 
+    <div style="display: flex; flex-direction: row;">
+        <% if(locals.user.id == comment.user._id){ %>
+            <a href="/comment/destroyComment?commentId=<%- comment._id %>"> X </a>
+        <% } %>
+        <li> <h3 style="display: inline"> <%= comment.content %> </h3> <small> - <%= comment.user.name%> </small> </li> 
+    </div>                                       
+<%}%>  

@@ -1,0 +1,32 @@
+<% for(post of Posts){ %>
+    <p style="display: flex; flex-direction: row;">        
+        <li> 
+            <% if(locals.user.id == post.user._id){ %>
+                <a href="/post/destroyPost?postId=<%-post._id%>"> X </a>
+            <% } %>
+        
+            <h3 style="display: inline"><%= post.content %></h3> 
+            <br>
+            <small > Post by - <%= post.user.name %></small>
+            <small>
+        
+                <form action="/comment/createComment?postId=<%- post._id %>" id="new-comment-form" method="post" style="margin-top: 10px;">
+                    <textarea name="commentContent" cols="20" rows="1" placeholder="type here..."></textarea>
+                    <button style="height: 20px; width: 5px;">  </button>
+                </form>
+        
+            </small>
+            <small>
+                <ul>
+                    <%- include('_comment')%>  
+                </ul>
+            </small>
+        </li>
+    </p>
+<%}%>
+
+
+
+
+
+

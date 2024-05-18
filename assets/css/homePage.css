@@ -1,0 +1,27 @@
+#login{
+    position: absolute;
+    height: 19  0px;
+    width: 280px;
+    background-color: pink;
+    left: 75%;
+}
+
+#form label,
+#form input, #form button {
+    position: relative;
+    margin-bottom: 20px;
+    /* left: 10px; */
+}
+
+#form label, #form button{
+    position: relative;
+    left: 10px;
+}
+
+#login > h3{
+    position: relative;
+    left: 10px;
+}
+
+
+ 

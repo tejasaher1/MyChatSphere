@@ -1,0 +1,7 @@
+body{
+    margin: 0px;
+    /* background-color: aqua; */
+    background-color: floralwhite;
+    /* ghostwhite */
+    background-image: linear-gradient(-90deg,floralwhite,rgb(32, 225, 254));
+}

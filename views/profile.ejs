@@ -1,0 +1,35 @@
+
+    <h1> Welcome <%= name %> to your Profile page!! </h1>
+
+    <section id="feed-posts">
+        <h2> Community Post </h2>
+        <% if(locals.user){%>
+            <form action="/post/createPost" id="new-post-form" method="post">
+                <textarea name="content" cols="30" rows="5" placeholder="type here..."></textarea>
+                <button> Submit </button>
+            </form>
+        <%}%>
+    </section>
+
+    <div>
+           <ol> 
+                
+                        <%- include('_Post') %>
+                
+            </ol>
+    </div>
+
+    <div style="position: relative; height: auto; width: 200px; left: 87%; bottom:400px;">
+        <div>
+            <h3> Friends </h3>
+            <section style="line-height: 5px">
+               <ol style=" position: relative;right:24px">
+                    <% for(Friend of friends){ %>
+                       <li> <p> <%= Friend.name %></p> </li>
+                    <%}%>
+               </ol>
+            </section>
+        </div>
+    </div>
+
+    

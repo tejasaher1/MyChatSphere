@@ -1,0 +1,26 @@
+body{
+    margin: 0px;
+}
+#mainDiv{
+    height: 50px;
+    width: 100%;
+    background-color: #333333;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+.create_Account h3{ 
+    margin: 10px;
+    color: white;
+}
+
+.profile_update h3{
+    margin: 10px;
+    color: white;
+}
+
+.signOut h3{ 
+    margin: 10px;
+    color: white;
+}
